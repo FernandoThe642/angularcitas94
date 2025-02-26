@@ -1,0 +1,82 @@
+.cont {
+    width: 100%;
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.tit {
+    text-align: center;
+    font-size: 1.5rem;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.tab {
+    width: 100%;
+    border-collapse: collapse;
+    background: #fff;
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.tab thead {
+    background-color: #7777;
+    color: white;
+    text-align: left;
+}
+
+.tab th {
+    padding: 12px;
+    font-weight: bold;
+}
+
+.tab td {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+.tab tbody tr:nth-child(odd) {
+    background-color: #f8f9fa;
+}
+
+.tab tbody tr:hover {
+    background-color: #e2e6ea;
+}
+
+.btn {
+    background-color: #3333;
+    color: white;
+    border: none;
+    padding: 6px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #8888;
+}
+
+@media (max-width: 600px) {
+    .tab {
+        display: block;
+        overflow-x: auto;
+        white-space: nowrap;
+    }
+}
+
+.error {
+    color: red;
+    font-weight: bold;
+  }
+  
+  .exito {
+    color: green;
+    font-weight: bold;
+  }
+  

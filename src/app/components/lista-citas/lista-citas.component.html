@@ -1,0 +1,53 @@
+
+    <h3 class="tit">Citas Medicas</h3>
+
+    <table class="tab">
+        <thead>
+            <tr>
+                <th>id</th>
+                <th>cedulaPaciente</th>
+                <th>nombrePaciente</th>
+                <th>correoPaciente</th>
+                <th>fechaCita</th>
+                <th>horaCita</th>
+                <th>especialidad</th>
+                <th>doctorAsignado </th>
+                <th>estado </th>
+                <th>Cancelar </th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let cita of citas">
+                <td>{{ cita.id }}</td>
+                <td>{{ cita.cedulaPaciente }}</td>
+                <td>{{ cita.nombrePaciente}}</td>
+                <td>{{ cita.correoPaciente }}</td>
+                <td>{{ cita.fechaCita }}</td>
+                <td>{{ cita.horaCita }}</td>
+                <td>{{ cita.especialidad }}</td>
+                <td>{{ cita.doctor.nombreDoctor  }}</td>
+                <td>{{ cita.estado  }}</td>
+                <td>
+                    <button class="btn" (click)="cancelarCita(cita.id)">Cancelar</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+ 
+
+  
+
+  <!-- <p *ngIf="historial.length === 0 && !mensajeError && !mensajeExito">No hay operaciones para mostrar.</p>
+  
+
+  <div *ngIf="mostrarFormularioEdicion" class="form-edicion">
+   <h4>Editar Operación</h4>
+   <label>Nombre:</label>
+   <input type="text" [(ngModel)]="operacionEditando.nombre" />
+
+   <label>Resultado:</label>
+   <input type="text" [(ngModel)]="operacionEditando.resultado" />
+
+   <button class="btn guardar" (click)="guardarEdicion()">Guardar</button>
+   <button class="btn cancelar" (click)="mostrarFormularioEdicion = false">Cancelar</button>
+ </div> -->

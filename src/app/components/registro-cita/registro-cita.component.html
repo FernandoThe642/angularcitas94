@@ -1,0 +1,41 @@
+<div class="contenedor">
+<div class="formulario">
+    <h2>Registrarse</h2>
+    <form (ngSubmit)="registrar()">
+    <fieldset>
+        <label for="cedula">Cédula</label>
+        <input id="cedula" [(ngModel)]="CitaMedica.cedulaPaciente" name="cedula" type="text" required />
+
+
+        <label for="nombre">Nombre</label>
+        <input id="nombre" [(ngModel)]="CitaMedica.nombrePaciente" name="nombre" type="text" required />
+
+
+        <label for="email">Correo electrónico</label>
+        <input id="email" [(ngModel)]="CitaMedica.correoPaciente" name="email" type="email" required />
+
+
+        <label for="doctor">Especialidad</label>
+        <select id="doctor" [(ngModel)]="CitaMedica.doctorAsignado" name="doctor">
+            <option [ngValue]="null" disabled selected>Seleccione una especialidad</option>
+            <option *ngFor="let doc of doctores" [ngValue]="doc">
+            {{ doc.especialidad }}
+            </option>
+        </select>
+
+        
+        <label for="fechaCita">Fecha</label>
+        <input id="fechaCita" [(ngModel)]="CitaMedica.fechaCita" name="fechaCita" type="date" [min]="minFecha" required />
+
+        <label for="horaCita">Hora</label>
+        <input id="horaCita" [(ngModel)]="CitaMedica.horaCita" name="horaCita" type="time"required  >
+
+        
+                
+    
+        <button type="submit">Registrarse</button>
+    </fieldset>
+    <p *ngIf="mensajeExito" class="exito">{{ mensajeExito }}</p>
+    </form>
+</div>
+</div>
